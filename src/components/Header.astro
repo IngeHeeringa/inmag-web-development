@@ -1,9 +1,11 @@
 ---
 import headerLogo from "../assets/logo-header.svg";
+import Navigation from "./Navigation.astro";
 ---
 
 <header class="main-header">
   <img src={headerLogo} alt="INMAG logo" width="100" height="40" />
+  <Navigation />
 </header>
 
 <style lang="scss">
@@ -12,7 +14,8 @@ import headerLogo from "../assets/logo-header.svg";
     background-color: var(--accent);
     display: flex;
     align-items: center;
-    height: 50px;
+    justify-content: space-between;
+    height: 60px;
     padding: 0 30px;
   }
 </style>
