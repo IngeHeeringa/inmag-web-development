@@ -1,0 +1,178 @@
+---
+import logoIcon from "../assets/logo-icon.svg";
+---
+
+<section class="hero">
+  <div class="hero__introduction introduction">
+    <h1 class="introduction__title">
+      We are <b class="introduction__title introduction__title--highlight"
+        >INMAG</b
+      >
+    </h1>
+    <span class="introduction__slogan"
+      >Dedicated to building your online presence with creativity and technology</span
+    >
+  </div>
+  <div class="social">
+    <span class="social__text">Find us on</span>
+    <ul class="social__links">
+      <li>
+        <a href="" class="social__link"
+          ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+        >
+      </li>
+      <li>
+        <a href="" class="social__link"
+          ><i class="fa-brands fa-google"></i>Google</a
+        >
+      </li>
+    </ul>
+  </div>
+  <img
+    src={logoIcon}
+    alt="INMAG logo icon"
+    width="800"
+    height="800"
+    class="bg-logo"
+  />
+</section>
+
+<style lang="scss">
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    min-height: 100vh;
+    padding: 30px;
+  }
+
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    text-align: end;
+    gap: 30px;
+    padding: 30px 0;
+    border-right: none;
+    border-bottom: solid 1px var(--secondary);
+
+    &__title {
+      font-size: 4.5rem;
+      line-height: 5.2rem;
+
+      &--highlight {
+        font-size: 5.5rem;
+        color: var(--primary);
+        background-color: var(--secondary);
+        padding: 2px 15px;
+      }
+    }
+
+    &__slogan {
+      font-size: 1.2rem;
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+
+    &__text {
+      font-size: 1.8rem;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__link {
+      display: flex;
+      gap: 10px;
+      font-size: 2rem;
+      font-family: var(--display);
+      color: var(--primary);
+      background-color: var(--accent);
+      padding: 7px 15px;
+      border-radius: 8px;
+      transition: 0.2s;
+
+      &:active,
+      &:visited {
+        color: var(--primary);
+        background-color: var(--accent);
+      }
+    }
+  }
+
+  .bg-logo {
+    position: absolute;
+    top: 15vh;
+    left: -220px;
+    width: 400px;
+    z-index: -99;
+    opacity: 0.3;
+    filter: invert(40%) sepia(49%) saturate(386%) hue-rotate(180deg)
+      brightness(92%) contrast(92%);
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .introduction {
+      justify-content: center;
+      align-items: flex-end;
+      gap: 40px;
+      padding: 20px;
+      width: 50%;
+      border-right: solid 1px var(--secondary);
+      border-bottom: none;
+
+      &__title {
+        font-size: 7rem;
+        line-height: normal;
+
+        &--highlight {
+          font-size: 7.5rem;
+        }
+      }
+
+      &__slogan {
+        font-size: 1.7rem;
+      }
+    }
+
+    .social {
+      gap: 10px;
+      width: 20%;
+
+      &__text {
+        font-size: 2.5rem;
+      }
+
+      &__link {
+        &:hover {
+          background-color: var(--secondary);
+        }
+      }
+    }
+
+    .bg-logo {
+      position: absolute;
+      top: 40vh;
+      left: -400px;
+      width: 800px;
+    }
+  }
+</style>
