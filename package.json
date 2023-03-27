@@ -7,11 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fontsource/biryani": "^4.5.10",
     "@fontsource/sulphur-point": "^4.5.10",
     "astro": "^2.1.5"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   }
 }
